@@ -73,8 +73,8 @@ if(${WIN32})
   set(INSTALL_INCLUDE_DIR include CACHE PATH "Installation directory for headers")
 else()
   set(INSTALL_INCLUDE_DIR include/fruit CACHE PATH "Installation directory for headers")
-  set(INSTALL_LIBRARY_DIR lib CACHE PATH "Installation directory for libraries")
 endif()
+set(INSTALL_LIBRARY_DIR lib CACHE PATH "Installation directory for libraries")
 
 set(FRUIT_VERSION "2.0.4")
 
