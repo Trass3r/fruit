@@ -22,17 +22,17 @@
 #error "Sparsehash included in non-cpp file."
 #endif
 
-#include <boost/unordered_set.hpp>
-#include <boost/unordered_map.hpp>
+#include <unordered_set>
+#include <unordered_map>
 
 namespace fruit {
 namespace impl {
 
 template <typename T>
-using HashSet = boost::unordered_set<T, std::hash<T>>;
+using HashSet = std::unordered_set<T, std::hash<T>>;
 
 template <typename Key, typename Value>
-using HashMap = boost::unordered_map<Key, Value, std::hash<Key>>;
+using HashMap = std::unordered_map<Key, Value, std::hash<Key>>;
 
 template <typename T>
 HashSet<T> createHashSet(T invalidValue1, T invalidValue2);
