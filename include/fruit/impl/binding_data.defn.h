@@ -40,7 +40,7 @@ struct GetBindingDepsHelper<fruit::impl::meta::Vector<fruit::impl::meta::Type<Ts
 template <>
 struct GetBindingDepsHelper<fruit::impl::meta::Vector<>> {
   inline const BindingDeps* operator()() {
-    static const TypeId types[] = {nullptr};
+    static const TypeId types[] = { { nullptr } };
     static const BindingDeps deps = {types, 0};
     return &deps;
   }
