@@ -84,7 +84,7 @@ set(CTEST_TEST_TIMEOUT 20 CACHE STRING "Maximum test time, before CTest will kil
 add_subdirectory(configuration)
 add_subdirectory(src)
 
-if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+if(${CMAKE_BUILD_TYPE} STREQUAL "Debug" OR NOT ${CMAKE_BUILD_TYPE})
   # Do not exclude these from "make all" in debug mode, they must build.
   add_subdirectory(examples)
   add_subdirectory(tests)
